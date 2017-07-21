@@ -8,7 +8,7 @@ const generateObjects = (parsed) => {
       cityList.map( city => {
         let animalType = city.split('_').length > 1 ? 'Vaca' : 'Boi'
         city = city.split('_')[0]
-        result.push({ date: elem.date, city, price: parseFloat(elem[city]), animalType })
+        result.push({ date: elem.date, city, price: parseFloat(elem[city]) || 0, animalType })
       })
     }
   })
