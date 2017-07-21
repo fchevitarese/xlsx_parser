@@ -1,5 +1,4 @@
-
-const sheet_list = [
+const sheetList = [
   'JaneiroBoi',
   'FevereiroBoi',
   'MarçoBoi',
@@ -12,3 +11,4 @@ const sheet_list = [
   'NovembroBoi',
   'DezembroBoi'
 ]
+module.exports = { sheetList }
