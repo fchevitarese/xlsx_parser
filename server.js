@@ -20,11 +20,10 @@ mongoose.connect('mongodb://cotacoesadmin:cotacoesadmin123@ds115583.mlab.com:155
 
 
 // TODO: Receive the file from an upload or lambda s3 function.
-const workbook = XLSX.readFile('./Cotacoes_2017.xlsx')
+const workbook = XLSX.readFile('./hoje.xlsx')
 
 sheetList.map( sheet => {
   const obj = cleanData(XLSX.utils.sheet_to_csv(workbook.Sheets[sheet]))
   const parsed = babyParser.parse(obj, { header: true, skipEmptyLines: true })
-  console.log(insertData(parsed))
+  insertData(parsed)
 })
-
